@@ -2,36 +2,170 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Desarrollo Web - UFPS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Multimedia - UFPS</title>
+    <style>
+        /* Estilos artísticos y profesionales */
+        :root {
+            --rojo-ufps: #aa1916;
+            --oscuro: #2d2d2d;
+            --gris-claro: #f4f4f9;
+            --blanco: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--oscuro);
+            background-color: var(--gris-claro);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--rojo-ufps), #dd2c2f);
+            color: var(--blanco);
+            padding: 3rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            background: var(--oscuro);
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--blanco);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcccb;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: var(--blanco);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: var(--rojo-ufps);
+            border-bottom: 2px solid var(--rojo-ufps);
+            padding-bottom: 10px;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .media-box {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .media-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .media-box img:hover {
+            transform: scale(1.02);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Ratio 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        footer {
+            background: var(--oscuro);
+            color: var(--blanco);
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .signature {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffcccb;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <h1>Cómo he Construido Esta Casa con $40,000 (y la Venderé por $800,000)</h1>
+        <h1>Cómo he Construido Esta Casa con $40,000</h1>
+        <p>(Y la venderé por $800,000)</p>
     </header>
 
     <nav>
-        <a href="https://www.youtube.com/watch?v=5X3yyda2S6c" target="_blank">Ver Video</a> | 
-        <a href="https://www.youtube.com/@AcademiadeConstruccion" target="_blank">Página del YouTuber</a>
+        <a href="https://www.youtube.com/watch?v=5X3yyda2S6c" target="_blank">Ver Video Original</a>
+        <a href="https://www.youtube.com/@AcademiadeConstruccion" target="_blank">Canal Oficial</a>
     </nav>
 
-    <section>
-        <h2>Introducción al Video</h2>
-        <p>
-            En este contenido se explora cómo la planificación financiera y la construcción estratégica 
-            pueden transformar una inversión moderada en un activo de alto valor, mostrando el potencial 
-            del desarrollo inmobiliario moderno.
-        </p>
+    <div class="container">
+        <section>
+            <h2>Introducción al Proyecto</h2>
+            <p class="intro-text">
+                "Este análisis profundiza en la ingeniería financiera y de construcción necesaria para maximizar 
+                el valor de una propiedad, transformando una inversión estratégica en un éxito inmobiliario."
+            </p>
 
-        <h3>Portada del Proyecto</h3>
-        <img src="https://img.youtube.com/vi/5X3yyda2S6c/maxresdefault.jpg" alt="Portada del video sobre construcción de casa" width="600">
+            <div class="media-box">
+                <h3>Visualización del Proyecto</h3>
+                <img src="https://img.youtube.com/vi/5X3yyda2S6c/maxresdefault.jpg" alt="Portada de construcción de casa">
+            </div>
 
-        <h3>Reproducción de Video</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/5X3yyda2S6c" frameborder="0" allowfullscreen></iframe>
-    </section>
+            <div class="media-box">
+                <h3>Contenido Multimedia</h3>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/5X3yyda2S6c" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <footer>
-        <p>Estudiante de Ingeniería de Sistemas - 2026</p>
+        <p>Ingeniería de Sistemas - Universidad Francisco de Paula Santander</p>
+        <p class="signature">Pagina creada por Luis Eduardo</p>
     </footer>
 
 </body>
